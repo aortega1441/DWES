@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>Formulario1</servlet-name>
+        <servlet-class>Servlets.Formulario1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Enlace</servlet-name>
+        <servlet-class>Servlets.Enlace</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletFormulario1InformacionCliente</servlet-name>
+        <servlet-class>Servlets.ServletFormulario1InformacionCliente</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Formulario1</servlet-name>
+        <url-pattern>/Formulario1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Enlace</servlet-name>
+        <url-pattern>/Enlace</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletFormulario1InformacionCliente</servlet-name>
+        <url-pattern>/ServletFormulario1InformacionCliente</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
