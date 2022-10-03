@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1 style="text-align: center">Encuesta privada</h1>
+
+        <h2>Rellena los datos indicados y pulsa enviar</h2>
+
+        <form method="post" action="/EncuestaPrivada/DatosEncuesta">
+
+            <label>Introduce tu nombre: </label>
+            <input type="text" name="nombre" value="" required/>
+            <br><br>
+            <label>Introduce tus apellidos: </label>
+            <input type="text" name="apellidos" value="" required/>
+            <br><br>
+            <label>Teclea tu número de teléfono: </label>
+            <input type="text" name="telefono" value="" required/>
+            <br><br>
+            <label>Indica tu ciudad de nacimiento: </label>
+            <input type="text" name="ciudad" value="" required/>
+            <br><br>
+            <label>Sexo: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label>Hombre: </label>
+            <input type="radio" name="sexo" value="hombre" />
+            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mujer: </label>
+            <input type="radio" name="sexo" value="mujer" />
+            <br><br>
+            <label>Selecciona tu país de origen: </label>
+            <select name="pais" required>
+                <option>Espana</option>
+                <option>Argentina</option>
+                <option>EEUU</option>
+                <option>Italia</option>
+                <option>Japón</option>
+            </select>
+            <br><br><br><br>  
+            <label style="color: red; font-size: 20px">Selecciona tus actividades de ocio favoritas: </label>
+            <br><br>            
+            <div id="act">
+                <input type="checkbox" name="act" value="Parapente" />
+                <label>PARAPENTE</label>
+                <br><br>            
+                <input type="checkbox" name="act" value="Ala delta" />
+                <label>ALA DELTA</label>
+                <br><br>            
+                <input type="checkbox" name="act" value="Submarinismo" />
+                <label>SUBMARINISMO</label>
+                <br><br>            
+                <input type="checkbox" name="act" value="Esqui" />
+                <label>ESQUI</label>
+            </div>
+            <br><br>
+            <label style="color: red; font-size: 20px">Comentarios sobre la página: </label>
+            <br><br>
+            <textarea name="comentarios" rows="8" cols="40" required>
+            </textarea>
+            <br><br>
+            <input type="submit" value="Enviar encuesta" />
+            <input type="reset" value="Borrar datos" />
+
+        </form>
+
+    </body>
+</html>
