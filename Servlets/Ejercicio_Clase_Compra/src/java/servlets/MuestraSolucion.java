@@ -77,21 +77,21 @@ public class MuestraSolucion extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h2>Datos de entrada</h2>");
-            out.println("Importe de venta: " + importe + " euros<br>");
-            out.println("Cantidad entregada: " + cantidad + " euros"
+            out.println("<span style='color:red'>Importe de venta: " + importe + " euros</span><br>");
+            out.println("<span style='color:green'>Cantidad entregada: " + cantidad + " euros</span>"
             );
             out.println("<h2>Datos de salida</h2>");
 
             if (billetes != null) {
-                out.println("Hay " + cantBilletes + " billetes de " + billetes + " euros.<br>");
+                out.println("<span style='color:orange'>Hay " + cantBilletes + " billetes de " + billetes + " euros.</span><br>");
             }
 
             if (centimos != null) {
-                out.println("Hay " + cantCentimos + " billetes de " + centimos + " euros.<br>");
+                out.println("<span style='color:orange'>Hay " + cantCentimos + " billetes de " + centimos + " euros.</span><br>");
             }
 
             if (euros != null) {
-                out.println("Hay " + cantEuros + " billetes de " + euros + " euros.");
+                out.println("<span style='color:orange'>Hay " + cantEuros + " billetes de " + euros + " euros.</span>");
             }
 
             out.println("</body>");
