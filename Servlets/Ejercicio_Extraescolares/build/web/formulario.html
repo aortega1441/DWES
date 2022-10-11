@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header style="padding-bottom: 2em; margin-bottom: 2em; background-color: grey"></header>
+
+        <div>
+            <div style="margin: 0 auto;height: auto; width: 50em">
+                <form action="/Ejercicio_Extraescolares/Validacion" method="post" style="display: inline-block">
+
+                    <table>
+                        <tr>
+
+                            <td><label>Nombre de la actividad:  </label></td>
+                            <td><input type="text" name="nombre" value="" /></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td><label>Lugar de celebración:  </label></td>
+                            <td><input type="text" name="lugar" value="" /></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td><label>Fecha:   </label></td>
+                            <td><input type="text" name="fecha" pattern="^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$" placeholder="dd/mm/yyyy" /></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td><label>Hora:   </label></td>
+                            <td><input type="time" name="hora" value="" /></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td><label>Destinada a:    </label></td>
+                            <td><input type="radio" name="destino" value="alumnado" checked="checked" /><label>alumnado</label></td>
+                            <td><input type="radio" name="destino" value="profesorado" /><label>profesorado</label></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td><label>Tipo de actividad:    </label></td>
+                            <td>
+                                <div class="tipo">
+                                    <input type="checkbox" name="tipo" value="academica" />
+                                    <label>academica</label>
+                                    <br>
+                                    <input type="checkbox" name="tipo" value="deportiva" />
+                                    <label>deportiva</label>
+                                    <br>
+                                    <input type="checkbox" name="tipo" value="cultural" />
+                                    <label>cultural</label>
+                                    <br>
+                                    <input type="checkbox" name="tipo" value="convivencia" />
+                                    <label>convivencia</label>
+                                </div>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td><label>Curso destinado: </label></td>
+                            <td><select name="curso">
+                                    <option>1º ESO</option>
+                                    <option>2º ESO</option>
+                                    <option>3º ESO</option>
+                                    <option>4º ESO</option>
+                                </select></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Profesor responsable: </label></td>
+                            <td><input type="text" name="profesor" value="" /></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Observaciones: </label></td>
+                            <td><textarea name="observaciones" rows="5" cols="30">
+                                </textarea></td>
+                        </tr>
+
+                        <tr>
+                            <td><br><input type="submit" value="Añadir actividad" name="anadir" /></td>
+                            <td><br><input type="reset" value="Borrar actividad" name="borrar" /></td>
+                            <td><br><button type="button" name="listado" onClick="location.href = 'listado.jsp';">Listado de actividaddes</button></td>
+                        </tr>
+
+                    </table>
+
+                    <br>
+
+                </form>
+
+                <img style="margin-left: 5em" src="logo_cdp_jose_cabrera.png" alt="alt"/>
+            </div>
+        </div>
+
+        <footer style="padding-top: 2em;margin-top: 2em; background-color: grey"></footer>
+    </body>
+</html>
