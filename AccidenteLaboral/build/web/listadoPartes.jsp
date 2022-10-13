@@ -12,10 +12,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <body>
+    <body class="m-0 vh-50 row justify-content-center align-items-center">
 
         <%
             ArrayList<Partes> lista = new ArrayList<Partes>();
@@ -31,14 +33,16 @@
 
             <%if (lista != null) {%>
 
-            <table>
+            <table class="border border-dark rounded">
+                
+                
 
-                <tr>
+                <tr class="border border-dark">
                     <%
                         for (int x = 0; x < cabecera.length; x++) {
                     %>
 
-                    <th style="background-color: grey">
+                    <th class="p-3 mb-2 bg-secondary text-white border border-dark">
                         <%=cabecera[x]%>
                     </th>
                     <%
@@ -52,24 +56,24 @@
                         String apellidos = parte.getApellido1() + ", " + parte.getApellido2();
                 %>
 
-                <tr style="background-color: lightgreen">
+                <tr class="p-3 mb-2 bg-success text-white">
 
-                    <td>
+                    <td class="border border-dark">
                         <%=parte.getNss()%>
                     </td>
-                    <td>
+                    <td class="border border-dark">
                         <%=apellidos%>
                     </td>
-                    <td><%=parte.getNombre()%>
+                    <td class="border border-dark"><%=parte.getNombre()%>
 
                     </td>
-                    <td>
+                    <td class="border border-dark">
                         <%=parte.getCif()%>
                     </td>
-                    <td>
+                    <td class="border border-dark">
                         <%=parte.getNombreEmpresa()%>
                     </td>
-                    <td>
+                    <td class="border border-dark">
                         <%=parte.getDescripcion()%>
                     </td>
 
@@ -84,7 +88,7 @@
             <%
             } else {
             %>
-            <h1 style="color: red">No hay ninguna lista de actividades actualmente<h1>
+            <h1 class="text-danger">No hay ninguna lista de actividades actualmente<h1>
 
                     <%
                         }
@@ -94,7 +98,7 @@
                     </table>
 
                     <br>
-                    <button type="button" name="anadir" onClick="location.href = 'formularioParte.jsp';">Seguir añadiendo actividades</button>
+                    <button class="btn btn-danger" type="button" name="anadir" onClick="location.href = 'formularioParte.jsp';">Seguir añadiendo partes</button>
 
                     </form>
 

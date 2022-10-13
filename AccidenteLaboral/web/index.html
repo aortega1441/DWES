@@ -4,43 +4,54 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
 -->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <header style="padding-bottom: 2em; margin-bottom: 2em; background-color: grey"></header>
 
-        <div>
-            <div style="margin: 0px auto;height: auto; width: 40em">
-                <form action="servletLogin" method="post" style="display: inline-block">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-                    <table>
-                        <tr>
+<body>
+    <header class="p-3 mb-2 bg-success text-white"></header>
 
-                            <td><label>Usuario: </label></td>
-                            <td><input type="text" name="usuario" value="" required/></td>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div>
+                    <div>
+                        <form action="servletLogin" method="post" style="display: inline-block">
 
-                        </tr>
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>Usuario:</td>
+                                        <td><input type="text" name="usuario" value="" required/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Contraseña:</td>
+                                        <td><input type="password" name="contrasenna" value="" required/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="submit" value="Acceder" name="acceder"
+                                                class="btn btn-outline-success" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                        <tr>
+                        </form>
 
-                            <td><label>Contraseña: </label></td>
-                            <td><input type="password" name="contrasenna" value="" required/></td>
-
-                        </tr>
-                    </table>
-
-                    <br>
-
-                    <input type="submit" value="Acceder" name="acceder" />
-
-                </form>
-
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
-        <footer style="padding-top: 2em;margin-top: 2em; background-color: grey"></footer>
-    </body>
+
+
+    <footer class="p-3 mb-2 bg-success text-white"></footer>
+</body>
+
 </html>
