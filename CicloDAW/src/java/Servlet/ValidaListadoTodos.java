@@ -25,6 +25,9 @@ import modelo.Usuario;
 public class ValidaListadoTodos extends HttpServlet {
 
     ArrayList<Usuario> listaTodos = new ArrayList<Usuario>();
+    
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {}
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

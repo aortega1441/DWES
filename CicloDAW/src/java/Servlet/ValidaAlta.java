@@ -40,7 +40,7 @@ public class ValidaAlta extends HttpServlet {
         try {
 
             conn = modelo.DB.CrearConexion();
-            String sql = "insert into alumnos values('" + nombre + "', '" + apellidos + "', '" + dawes + "', '" + dawec + "', '" + diw + "', '" + daw + "', '" + fct + "', '" + proyecto + "')";
+            String sql = "insert into alumnos values(null, '" + nombre + "', '" + apellidos + "', '" + dawes + "', '" + dawec + "', '" + diw + "', '" + daw + "', '" + fct + "', '" + proyecto + "')";
             PreparedStatement smt = conn.prepareCall(sql);
             smt.executeUpdate();
             
