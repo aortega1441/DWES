@@ -50,13 +50,13 @@ public class ValidaTitulo extends HttpServlet {
         if(titulo.length()!=0){
             
             Connection conn = null;
-            listaTitulo.clear();
+            //listaTitulo.clear();
 
         try {
 
             conn = CrearConexion();
 
-            String sql = "select peliculas.titulo, director.nombre, peliculas.fecha_estreno from peliculas, director where director.id = peliculas.director and peliculas.titulo = '" + titulo + "'";
+            String sql = "select peliculas.titulo, director.nombre, peliculas.fecha_estreno from peliculas, director where director.id = peliculas.director and peliculas.titulo like '%" + titulo + "%'";
             PreparedStatement smt = conn.prepareCall(sql);
             ResultSet rs = smt.executeQuery();
 
@@ -71,9 +71,11 @@ public class ValidaTitulo extends HttpServlet {
             request.getRequestDispatcher("/MuestraListadoTitulo.jsp").forward(request, response);
 
         } catch (SQLException e) {
-            System.out.println(e.getMessage());            
+            System.out.println(e.getMessage());        
+            request.getRequestDispatcher("/ERRORES/ErrorBuscaVacio.html").forward(request, response);
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            request.getRequestDispatcher("/ERRORES/ErrorBuscaVacio.html").forward(request, response);
         }
         
         }else{

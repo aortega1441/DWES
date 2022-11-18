@@ -20,14 +20,13 @@
             
             ArrayList<Peliculas> listaTitulo = new ArrayList<Peliculas>();
             listaTitulo = (ArrayList) getServletContext().getAttribute("listaTitulo");
-            System.out.println(listaTitulo);
             String[] cabecera = {"Película", "Director", "Fecha"};
-
+            
         %>
 
         <%
         
-            if(listaTitulo!=null){
+            if(listaTitulo.size()!=0){
         
         %>
         
